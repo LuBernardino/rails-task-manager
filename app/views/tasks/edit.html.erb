@@ -1,12 +1,13 @@
-<h2>Edit task</h2>
+<div class="mx-auto">
+  <h1 class="m-3 p-2">Edit task</h1>
 
-<%= form_with model: @task do |f| %>
-  <%= f.label :Title %>
-  <%= f.text_field :title %>
-  <%= f.label :Details %>
-  <%= f.text_field :details %>
-  <%= f.submit %>
-<% end %>
+  <%= form_with class:"form-group m-3", model: @task do |f| %>
+    <%= f.label :Title %>
+    <%= f.text_field :title, class:"form-control mb-4" %>
+    <%= f.label :Details %>
+    <%= f.text_field :details, class:"form-control mb-4" %>
+    <%= f.submit :Submit, class: 'btn btn-info col-4' %>
+  <% end %>
 
-
-<%= link_to 'Back to the list of tasks', tasks_path%>
+  <%= link_to 'Back to the list of tasks', tasks_path, class:"btn btn-warning m-2 text-decoration-none col-4"%>
+</div>

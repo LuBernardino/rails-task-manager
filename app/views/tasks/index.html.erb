@@ -1,9 +1,11 @@
-<h1>INDEX TASKS PAGE</h1>
+<div class="mx-auto">
+  <h1 class="m-2 p-2">List of Tasks 📋</h1>
 
-<ul>
-  <% @tasks.each do |task| %>
-    <li><%= link_to task.title, task_path(task)%></li>
-  <% end %>
-</ul>
+  <ul class="list-group list-group-flush">
+    <% @tasks.each do |task| %>
+      <li class="m-2 col-6 p-2 list-group-item"><%= link_to task.title, task_path(task), class:"text-decoration-none" %></li>
+    <% end %>
+  </ul>
 
-<%= link_to 'Add a new task', task_new_path%>
+  <%= link_to 'Add a new task', task_new_path, class:"btn btn-warning m-2 text-decoration-none col-6"%>
+</div>

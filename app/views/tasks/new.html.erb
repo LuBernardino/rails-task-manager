@@ -1,11 +1,12 @@
-<h2>New task</h2>
+<div class="mx-auto">
+  <h1 class="m-3 p-2">New task 📋</h1>
 
-<%= form_with model: @task do |f| %>
-  <%= f.label :Title %>
-  <%= f.text_field :title %>
-  <%= f.label :Details %>
-  <%= f.text_field :details %>
-  <%= f.submit %>
-<% end %>
-
-<%= link_to 'back', tasks_path %>
+  <%= form_with class:"form-group m-3", model: @task do |f| %>
+    <%= f.label :Title %>
+    <%= f.text_field :title, class:"form-control" %>
+    <%= f.label :Details %>
+    <%= f.text_field :details, class:"form-control mb-4" %>
+    <%= link_to 'back', tasks_path, class:"btn btn-warning m-2 text-decoration-none col-4"%>
+    <%= f.submit :Submit, class: 'btn btn-info col-4'%>
+  <% end %>
+</div>
